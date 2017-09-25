@@ -23,7 +23,7 @@ function Snake(){
 	this.interval = setInterval(()=>this.loop(), 100);
 	
 }
-//encapsulatng game in function makes it so variables can' tbe accessed from webpage
+//encapsulatng game in function makes it so variables can't be accessed from webpage
 
 Snake.prototype.handleKeyDown = function(event){
 	switch(event.keyCode){
@@ -70,12 +70,12 @@ Snake.prototype.render = function(){
 		return;
 	}
 	this.ctx.fillStyle = '#000';
-	this.cytx.fillRect(0, 0,
+	this.ctx.fillRect(0, 0,
 		this.width*this.cellSize,
 		this.height*this.cellSize);
 	//Draw the snake
 	this.ctx.fillStyle = 'ivory';
-	this.snake = forEach((segment) =>{
+	this.snake.forEach((segment) =>{
 		this.ctx.fillRect(segment.x*this.cellSize,
 			segment.y*this.cellSize,
 			this.cellSize,
@@ -104,7 +104,7 @@ Snake.prototype.update = function(){
 		case 'up':
 			y--;
 			break;
-		case: 'down':
+		case 'down':
 			y++;
 			break;
 	}
